@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Security Threats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>NET_SEC<span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#attacks">Attacks</a></li>
+      <li><a href="#comparison">Compare</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-scan-line"></div>
+    <div class="hero-content">
+      <p class="hero-tag">// CYBERSECURITY OVERVIEW</p>
+      <h1 class="hero-title">
+        <span class="line">Network</span>
+        <span class="line accent">Security</span>
+        <span class="line">Threats</span>
+      </h1>
+      <p class="hero-sub">Understanding the Four Major Attack Types</p>
+      <p class="hero-intro">
+        In today's interconnected digital world, network security has become a critical concern
+        for individuals, organizations, and governments. This site explores the four fundamental
+        categories of network attacks — each posing unique threats and requiring specific countermeasures.
+      </p>
+      <div class="hero-tags">
+        <span class="tag interruption">Interruption</span>
+        <span class="tag interception">Interception</span>
+        <span class="tag modification">Modification</span>
+        <span class="tag fabrication">Fabrication</span>
+      </div>
+      <a href="#attacks" class="hero-cta">EXPLORE ATTACKS <span>↓</span></a>
+    </div>
+    <div class="hero-visual">
+      <div class="shield-graphic">
+        <div class="shield-outer">
+          <div class="shield-inner">
+            <div class="shield-icon">⚡</div>
+            <div class="shield-ring ring-1"></div>
+            <div class="shield-ring ring-2"></div>
+            <div class="shield-ring ring-3"></div>
+          </div>
+        </div>
+        <div class="cia-triad">
+          <div class="cia-node" style="--angle:0deg; --color: var(--interruption)">A</div>
+          <div class="cia-node" style="--angle:120deg; --color: var(--interception)">C</div>
+          <div class="cia-node" style="--angle:240deg; --color: var(--modification)">I</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTACKS SECTION -->
+  <section class="attacks-section" id="attacks">
+    <div class="section-header">
+      <p class="section-tag">// ATTACK CATEGORIES</p>
+      <h2>The Four Attack Types</h2>
+      <p class="section-sub">Click each card to flip and reveal examples</p>
+    </div>
+
+    <div class="attacks-grid">
+
+      <!-- INTERRUPTION -->
+      <div class="attack-card" data-type="interruption" id="card-interruption">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-label">01</div>
+            <div class="card-icon">🔴</div>
+            <h3>Interruption</h3>
+            <p class="card-def">A network service or system asset is disrupted or destroyed, making it unavailable to legitimate users. Primary threat to data <strong>Availability</strong>.</p>
+            <div class="cia-badge">CIA: Availability</div>
+            <div class="card-flip-hint">Click to see examples →</div>
+          </div>
+          <div class="card-back">
+            <div class="card-label back">Example</div>
+            <h4>DoS / DDoS Attack</h4>
+            <p>An attacker overwhelms a web server with thousands of fake requests, causing it to crash. Advanced DDoS attacks use <em>botnets</em> — networks of compromised machines flooding targets simultaneously.</p>
+            <div class="consequences">
+              <p class="cons-title">Consequences:</p>
+              <ul>
+                <li>Complete service downtime</li>
+                <li>Financial losses</li>
+                <li>Reputational damage</li>
+              </ul>
+            </div>
+            <div class="card-flip-hint">← Click to go back</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERCEPTION -->
+      <div class="attack-card" data-type="interception" id="card-interception">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-label">02</div>
+            <div class="card-icon">🟡</div>
+            <h3>Interception</h3>
+            <p class="card-def">A passive attack where an unauthorized actor accesses confidential data transmitted between parties <strong>without altering it</strong>. Threatens data <strong>Confidentiality</strong>.</p>
+            <div class="cia-badge">CIA: Confidentiality</div>
+            <div class="card-flip-hint">Click to see examples →</div>
+          </div>
+          <div class="card-back">
+            <div class="card-label back">Example</div>
+            <h4>Man-in-the-Middle (MITM)</h4>
+            <p>A hacker sets up a rogue Wi-Fi hotspot in a coffee shop. When users connect, the attacker eavesdrops using <em>packet sniffing</em> or <em>ARP spoofing</em>, capturing passwords and financial data.</p>
+            <div class="consequences">
+              <p class="cons-title">Consequences:</p>
+              <ul>
+                <li>Theft of sensitive data</li>
+                <li>Corporate espionage</li>
+                <li>Identity theft</li>
+              </ul>
+            </div>
+            <div class="card-flip-hint">← Click to go back</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODIFICATION -->
+      <div class="attack-card" data-type="modification" id="card-modification">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-label">03</div>
+            <div class="card-icon">🟠</div>
+            <h3>Modification</h3>
+            <p class="card-def">An active attack where an unauthorized actor gains access to data and <strong>alters, tampers, or manipulates it</strong>. Primarily threatens data <strong>Integrity</strong>.</p>
+            <div class="cia-badge">CIA: Integrity</div>
+            <div class="card-flip-hint">Click to see examples →</div>
+          </div>
+          <div class="card-back">
+            <div class="card-label back">Example</div>
+            <h4>Cross-Site Scripting (XSS)</h4>
+            <p>A hacker injects malicious JavaScript into a legitimate website. When users visit, the script executes in their browsers — stealing session cookies, redirecting to phishing sites, or altering content.</p>
+            <div class="consequences">
+              <p class="cons-title">Consequences:</p>
+              <ul>
+                <li>Corruption of critical data</li>
+                <li>Unauthorized transactions</li>
+                <li>Spread of misinformation</li>
+              </ul>
+            </div>
+            <div class="card-flip-hint">← Click to go back</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FABRICATION -->
+      <div class="attack-card" data-type="fabrication" id="card-fabrication">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-label">04</div>
+            <div class="card-icon">🟢</div>
+            <h3>Fabrication</h3>
+            <p class="card-def">An attacker creates false data, injects bogus information, or impersonates a legitimate entity. Threatens data <strong>Authentication</strong>.</p>
+            <div class="cia-badge">CIA: Authentication</div>
+            <div class="card-flip-hint">Click to see examples →</div>
+          </div>
+          <div class="card-back">
+            <div class="card-label back">Example</div>
+            <h4>Phishing + IP Spoofing</h4>
+            <p>A hacker sends emails pretending to be a legitimate bank, creating a fake identical website. Users enter credentials which are stolen. SQL Injection can also insert false records into databases.</p>
+            <div class="consequences">
+              <p class="cons-title">Consequences:</p>
+              <ul>
+                <li>Fraudulent transactions</li>
+                <li>Identity impersonation</li>
+                <li>Compromised accounts</li>
+              </ul>
+            </div>
+            <div class="card-flip-hint">← Click to go back</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DETAIL PANELS -->
+  <section class="details-section">
+    <div class="section-header">
+      <p class="section-tag">// PREVENTION MEASURES</p>
+      <h2>How to Defend Against Each Attack</h2>
+    </div>
+
+    <div class="detail-panels">
+
+      <div class="detail-panel" data-type="interruption">
+        <div class="panel-accent"></div>
+        <div class="panel-number">01</div>
+        <h3>Interruption <span>Defense</span></h3>
+        <div class="prevention-list">
+          <div class="prev-item"><span class="prev-icon">🛡</span><p>Deploy firewalls and Intrusion Prevention Systems (IPS)</p></div>
+          <div class="prev-item"><span class="prev-icon">🌐</span><p>Use Content Delivery Networks (CDN) to distribute traffic</p></div>
+          <div class="prev-item"><span class="prev-icon">💾</span><p>Maintain regular system backups and disaster recovery plans</p></div>
+          <div class="prev-item"><span class="prev-icon">⚙</span><p>Implement rate limiting and traffic filtering</p></div>
+          <div class="prev-item"><span class="prev-icon">☁</span><p>Use cloud-based DDoS mitigation services</p></div>
+        </div>
+      </div>
+
+      <div class="detail-panel" data-type="interception">
+        <div class="panel-accent"></div>
+        <div class="panel-number">02</div>
+        <h3>Interception <span>Defense</span></h3>
+        <div class="prevention-list">
+          <div class="prev-item"><span class="prev-icon">🔒</span><p>Encrypt all communications using SSL/TLS protocols</p></div>
+          <div class="prev-item"><span class="prev-icon">📡</span><p>Avoid using untrusted public Wi-Fi networks</p></div>
+          <div class="prev-item"><span class="prev-icon">🔐</span><p>Use Virtual Private Networks (VPNs) for secure connections</p></div>
+          <div class="prev-item"><span class="prev-icon">🔄</span><p>Regularly update software and security patches</p></div>
+          <div class="prev-item"><span class="prev-icon">✅</span><p>Implement strong authentication mechanisms</p></div>
+        </div>
+      </div>
+
+      <div class="detail-panel" data-type="modification">
+        <div class="panel-accent"></div>
+        <div class="panel-number">03</div>
+        <h3>Modification <span>Defense</span></h3>
+        <div class="prevention-list">
+          <div class="prev-item"><span class="prev-icon">🔍</span><p>Implement Intrusion Detection Systems (IDS) and IPS</p></div>
+          <div class="prev-item"><span class="prev-icon">✍</span><p>Use data encryption and digital signatures to verify integrity</p></div>
+          <div class="prev-item"><span class="prev-icon">🚪</span><p>Apply strict access controls and privilege management</p></div>
+          <div class="prev-item"><span class="prev-icon">🧹</span><p>Validate and sanitize all user inputs in web applications</p></div>
+          <div class="prev-item"><span class="prev-icon">#</span><p>Use checksums and hash functions to detect unauthorized changes</p></div>
+        </div>
+      </div>
+
+      <div class="detail-panel" data-type="fabrication">
+        <div class="panel-accent"></div>
+        <div class="panel-number">04</div>
+        <h3>Fabrication <span>Defense</span></h3>
+        <div class="prevention-list">
+          <div class="prev-item"><span class="prev-icon">📝</span><p>Use digital signatures to verify sender authenticity</p></div>
+          <div class="prev-item"><span class="prev-icon">📲</span><p>Implement multi-factor authentication (MFA)</p></div>
+          <div class="prev-item"><span class="prev-icon">🧱</span><p>Deploy firewalls and email filtering systems</p></div>
+          <div class="prev-item"><span class="prev-icon">🎓</span><p>Educate users about recognizing phishing attempts</p></div>
+          <div class="prev-item"><span class="prev-icon">📌</span><p>Use certificate pinning and verify SSL/TLS certificates</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="comparison-section" id="comparison">
+    <div class="section-header">
+      <p class="section-tag">// COMPARATIVE ANALYSIS</p>
+      <h2>Attack Type Comparison</h2>
+      <p class="section-sub">Hover rows to highlight. Click column headers to sort.</p>
+    </div>
+    <div class="table-wrapper">
+      <table class="comparison-table" id="compTable">
+        <thead>
+          <tr>
+            <th data-col="0" class="sortable">Attack Type <span class="sort-icon">↕</span></th>
+            <th data-col="1" class="sortable">Category <span class="sort-icon">↕</span></th>
+            <th data-col="2">CIA Triad Target</th>
+            <th data-col="3">Nature</th>
+            <th data-col="4">Examples</th>
+            <th data-col="5">Key Prevention</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-type="interception">
+            <td><span class="type-pill interception">Interception</span></td>
+            <td><span class="cat-badge passive">Passive</span></td>
+            <td>Confidentiality</td>
+            <td>Access without alteration</td>
+            <td>Eavesdropping, Packet Sniffing, MITM</td>
+            <td>Encryption, VPNs, Trusted Networks</td>
+          </tr>
+          <tr data-type="interruption">
+            <td><span class="type-pill interruption">Interruption</span></td>
+            <td><span class="cat-badge active">Active</span></td>
+            <td>Availability</td>
+            <td>Disruption or destruction</td>
+            <td>DoS, DDoS, Malware</td>
+            <td>Firewalls, CDN, Backups, Rate limiting</td>
+          </tr>
+          <tr data-type="modification">
+            <td><span class="type-pill modification">Modification</span></td>
+            <td><span class="cat-badge active">Active</span></td>
+            <td>Integrity &amp; Availability</td>
+            <td>Access and alteration</td>
+            <td>MITM (tamper), XSS, File tampering</td>
+            <td>IDS/IPS, Access Controls, Input validation</td>
+          </tr>
+          <tr data-type="fabrication">
+            <td><span class="type-pill fabrication">Fabrication</span></td>
+            <td><span class="cat-badge active">Active</span></td>
+            <td>Authentication &amp; Availability</td>
+            <td>Creation of false data</td>
+            <td>Spoofing, Phishing, SQL Injection</td>
+            <td>Digital signatures, MFA, User education</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CIA TRIAD VISUAL -->
+  <section class="cia-section">
+    <div class="section-header">
+      <p class="section-tag">// CIA TRIAD</p>
+      <h2>How Attacks Map to the CIA Triad</h2>
+    </div>
+    <div class="cia-visual">
+      <div class="cia-card" data-cia="confidentiality">
+        <div class="cia-icon">👁</div>
+        <h3>Confidentiality</h3>
+        <p>Keeping data private and protected from unauthorized access.</p>
+        <div class="cia-link"><span class="type-pill interception">Interception</span></div>
+      </div>
+      <div class="cia-center">
+        <div class="cia-triangle">
+          <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,10 190,170 10,170" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+            <polygon points="100,40 165,155 35,155" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <text x="100" y="100" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11" font-family="Space Mono">CIA</text>
+            <text x="100" y="115" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11" font-family="Space Mono">TRIAD</text>
+          </svg>
+        </div>
+      </div>
+      <div class="cia-card" data-cia="integrity">
+        <div class="cia-icon">✏</div>
+        <h3>Integrity</h3>
+        <p>Ensuring data remains accurate and unaltered by unauthorized parties.</p>
+        <div class="cia-link"><span class="type-pill modification">Modification</span></div>
+      </div>
+      <div class="cia-card cia-bottom" data-cia="availability">
+        <div class="cia-icon">⚡</div>
+        <h3>Availability</h3>
+        <p>Guaranteeing authorized users have reliable access to resources.</p>
+        <div class="cia-link">
+          <span class="type-pill interruption">Interruption</span>
+          <span class="type-pill fabrication">Fabrication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section class="conclusion-section" id="conclusion">
+    <div class="section-header">
+      <p class="section-tag">// PERSONAL CONCLUSION</p>
+      <h2>Final Thoughts</h2>
+    </div>
+    <div class="conclusion-content">
+      <div class="conclusion-text">
+        <p>
+          After analyzing these four fundamental attack categories, it becomes clear that network security
+          is not just about preventing unauthorized access — it's about protecting the <strong>entire information lifecycle</strong>.
+        </p>
+        <p>
+          Interception teaches us the importance of <span class="highlight interception">confidentiality through encryption</span>.
+          Interruption reminds us that <span class="highlight interruption">availability is crucial for business continuity</span>.
+          Modification highlights why <span class="highlight modification">integrity verification is essential</span>, and
+          Fabrication demonstrates the critical need for <span class="highlight fabrication">strong authentication mechanisms</span>.
+        </p>
+        <p>
+          The most effective defense is a <strong>layered security approach</strong> that combines technical solutions
+          (encryption, firewalls, IDS) with human awareness (training, phishing recognition). As cyber threats
+          continue to evolve with AI-enhanced attacks, staying informed and proactive is no longer optional —
+          it's a necessity for every individual and organization connected to the internet.
+        </p>
+      </div>
+      <div class="conclusion-visual">
+        <div class="layered-defense">
+          <div class="defense-layer" style="--delay:0s">
+            <span>Human Awareness & Training</span>
+          </div>
+          <div class="defense-layer" style="--delay:.1s">
+            <span>Policy & Access Controls</span>
+          </div>
+          <div class="defense-layer" style="--delay:.2s">
+            <span>Encryption & VPNs</span>
+          </div>
+          <div class="defense-layer" style="--delay:.3s">
+            <span>IDS / IPS Systems</span>
+          </div>
+          <div class="defense-layer" style="--delay:.4s">
+            <span>Firewalls & Filtering</span>
+          </div>
+          <div class="defense-layer core" style="--delay:.5s">
+            <span>🔐 Protected Asset</span>
+          </div>
+        </div>
+        <p class="defense-caption">Layered Security Architecture</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section class="references-section" id="references">
+    <div class="section-header">
+      <p class="section-tag">// BIBLIOGRAPHY</p>
+      <h2>References</h2>
+    </div>
+    <div class="references-grid">
+      <div class="ref-item">
+        <span class="ref-num">01</span>
+        <div class="ref-content">
+          <p class="ref-source">Baeldung Computer Science</p>
+          <p>Interruption vs. Interception vs. Modification vs. Fabrication. (2026, March 13).</p>
+          <a href="https://www.baeldung.com/cs/security-interruption-interception-modification-fabrication" target="_blank" rel="noopener">baeldung.com ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">02</span>
+        <div class="ref-content">
+          <p class="ref-source">IBM Think Topics</p>
+          <p>What Is a Man-in-the-Middle (MITM) Attack? (2024, June 11).</p>
+          <a href="https://www.ibm.com/think/topics/man-in-the-middle" target="_blank" rel="noopener">ibm.com ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">03</span>
+        <div class="ref-content">
+          <p class="ref-source">Rapid7 Fundamentals</p>
+          <p>What is a Man-in-the-Middle (MITM) Attack? (2025, April 10).</p>
+          <a href="https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/" target="_blank" rel="noopener">rapid7.com ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">04</span>
+        <div class="ref-content">
+          <p class="ref-source">University of Mustansiriyah</p>
+          <p>Information Security — Lecture Notes. (2020, May 6).</p>
+          <a href="https://uomustansiriyah.edu.iq/media/lectures/6/6_2020_05_06!04_30_41_PM.pdf" target="_blank" rel="noopener">uomustansiriyah.edu.iq ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">05</span>
+        <div class="ref-content">
+          <p class="ref-source">Huntress Blog</p>
+          <p>The 36 Most Common Cyberattacks. (2025, May 2).</p>
+          <a href="https://www.huntress.com/blog/most-common-cyberattacks" target="_blank" rel="noopener">huntress.com ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">06</span>
+        <div class="ref-content">
+          <p class="ref-source">Vectra AI Topics</p>
+          <p>What is Attack Techniques? (2026, February 9).</p>
+          <a href="https://www.vectra.ai/topics/cyberattack-techniques" target="_blank" rel="noopener">vectra.ai ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">07</span>
+        <div class="ref-content">
+          <p class="ref-source">Seraphic Security Blog</p>
+          <p>7 Types of Man in the Middle Attacks. (2025, September 10).</p>
+          <a href="https://seraphicsecurity.com/learn/website-security/7-types-of-man-in-the-middle-attacks-and-5-real-world-examples/" target="_blank" rel="noopener">seraphicsecurity.com ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">08</span>
+        <div class="ref-content">
+          <p class="ref-source">SearchInform Cybersecurity</p>
+          <p>Types of Cyber Attacks: Understanding the Threats. (2026, May 15).</p>
+          <a href="https://searchinform.com/articles/cybersecurity/cyber-threats/cyber-attacks/types/" target="_blank" rel="noopener">searchinform.com ↗</a>
+        </div>
+      </div>
+      <div class="ref-item">
+        <span class="ref-num">09</span>
+        <div class="ref-content">
+          <p class="ref-source">IPCisco Lessons</p>
+          <p>Cyber Attacks, Network Attacks, Threats and Mitigation. (2023, April 7).</p>
+          <a href="https://ipcisco.com/lesson/cyber-attacks-network-attacks/" target="_blank" rel="noopener">ipcisco.com ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>NET_SEC<span class="logo-bracket">]</span>
+      </div>
+      <p>Network Security Threats — Academic Website</p>
+      <p class="footer-sub">Understanding the four fundamental network attack categories</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
